@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@400;500&display=swap");
+
+.mystic-header {
+  background: linear-gradient(to right, #6a82fb, #fc5c7d);
+  color: white;
+  text-align: center;
+  padding: 20px 15px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Playfair Display", serif;
+  animation: fadeInDown 0.8s ease;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #fff, #f8f8f8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Centered Quote Block */
+.quote-container {
+  max-width: 600px;
+  margin: 12px auto;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.quote {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: white;
+  opacity: 0.9;
+}
+
+.quote-author {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+/* Navigation */
+.nav-menu {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  font-size: 0.9rem;
+}
+
+.nav-menu a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .quote {
+    font-size: 0.9rem;
+  }
+
+  .quote-author {
+    font-size: 0.8rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-menu a {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+/* Entrance Animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

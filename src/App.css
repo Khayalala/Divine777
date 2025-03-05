@@ -1,17 +1,39 @@
+/* Reset to prevent unwanted horizontal scroll */
 html,
-body,
-#root {
-  height: 100%;
-  margin: 0;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Main Full Width - Do NOT Center Main */
 main {
-  flex-grow: 1;
-  padding: 20px;
-  text-align: center;
+  width: 100%;
+  padding: 0;
+}
+
+/* Section Stays Full Width */
+section {
+  width: 100%;
+}
+
+/* Header & Footer Full Width */
+header,
+footer {
+  width: 100%;
+}
+
+/* Angel Numbers & Cards Grids - Keep Centered Inside Own Sections */
+.numbers-grid,
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Optional Reset for Good Measure */
+* {
+  box-sizing: border-box;
 }
